@@ -8,7 +8,6 @@ A estrutura de pastas é representada pela árvore:
 1.1. proj-new<br />
 1.2. proj-old<br />
 2. prod
-3. readme-src
 
 ## 0. raiz
 Diretório responsável por armazenar o arquivo de documentação para o desenvolvimento, operação e manutenção tanto do projeto quanto da construção do software (Análise de Requisitos e Documentação.docx).
