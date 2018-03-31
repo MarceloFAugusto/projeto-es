@@ -1,0 +1,350 @@
+
+<!-- saved from url=(0064)http://www.theclub.com.br/restrito/revistas/201209/post0912.aspx -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Language" content="pt-br">
+		
+		<title>Postos de Combustível - Automação de Bombas</title>
+		<link rel="shortcut icon" href="http://www.theclub.com.br/images/theclub.ico" type="image/x-icon">
+		<link href="./Postos de Combustível - Automação de Bombas_files/materias.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0" background="./Postos de Combustível - Automação de Bombas_files/TheClubWatermark.jpg" bgproperties="fixed" style="background-repeat: no-repeat; background-position: center;">
+
+		<form method="post" action="http://www.theclub.com.br/restrito/revistas/201209/post0912.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTc4NzcxMjI4OGRkdC62vv9e7zFqwO7qpRLta2T4Co63BAN2yz0IyOHSBbQ=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F62BAF36">
+</div>
+		<br>
+		
+		<table border="0" width="775" cellspacing="0" cellpadding="0" align="center">
+		<tbody><tr>
+			<td>
+				<h1>Postos de Combustível - Automação de Bombas</h1><br>
+			</td>
+		</tr>
+		
+	<!-- Fim Do Topo com o titulo e começo do corpo com o texto do artigo--> 
+	 
+		<tr>
+			<td class="texto">
+                <h2>O processo de automação de postos de combustível envolve  diversas etapas, tais como automação da loja  de conveniências, automação da pista, automação da retaguarda, controle de tanques de armazenamento e bombas de  combustível.</h2>
+                <h2> Neste artigo são apresentadas informações relevantes a respeito do desenvolvimento  de um sistema de automação de bombas de combustível.  Através do qual é possível monitorar  toda a atividade das bombas, bem como intervir remotamente nas mesmas em tempo  real, efetuando <em>presets</em> de  abastecimento em dinheiro e/ou volume,  bloqueando e/ou liberando abastecimentos, alterando  preços dos produtos, dentre outras funcionalidades.</h2>
+                
+                
+                <br>
+                <br>
+                	<h4> Componentes do Sistema</h4>
+                <br>
+                
+                
+                <h2> Tipicamente, um sistema de bombas de combustível automatizado segue um esquema semelhante ao apresentado na <em>Figura 01</em>. </h2>
+                <h2> Nele, vemos que as  bombas de combustível são ligadas ao <em>Concentrador  Universal de Bombas</em> – CUB. O CUB  é o equipamento responsável por  centralizar as informações e dados  enviados pelas bombas e gerenciar a  comunicação entre o servidor da aplicação  e a pista. Neste exemplo,  apresentamos as funcionalidades do  CUB do fabricante <em>Gilbarco</em>.</h2>
+                <h2> O CUB é peça central no desenvolvimento de sistemas de automação  de bombas de combustível e por vezes constitui fator restritivo ao maior número  de postos automatizados, principalmente devido ao seu relativo alto preço que,  quando associado aos custos de compra e manutenção dos sistemas de <em>software</em> necessários, podem  invialibilizar este tipo de aplicação em postos de menor porte.</h2>
+                <h2> O CUB é ligado, via  RS232, a um servidor de aplicação,  de preferência dedicado somente a esta função, onde rodam o <em>software</em> de configuração do CUB  distribuído pelo fabricante e o <em>software</em> de monitoria de bombas desenvolvido pela <em>software house.</em></h2>
+                <h2>Alguns cuidados devem ser tomados ao realizar este tipo de  automação sob pena de prejuízos e/ou problemas sérios no correto andamento das  atividades na pista, como é o caso, por exemplo, da importância de se ter um  servidor de aplicação dedicado. Uma vez configuradas as bombas para trabalhar  sob supervisão do CUB, caso o servidor de aplicação trave e/ou caia por algum  motivo, todas as operações da pista são interrompidas até que o sistema seja  regularizado ou que as bombas sejam re-configuradas para operar de forma não  supervisionada.</h2>
+                <h2> O sistema pode também ter acesso via <em>Internet</em>, caso a <em>software  house</em> disponibilize algum tipo de acesso remoto às informações gerencias  do posto. Tipicamente se faz necessário desenvolver  alguma interface deste tipo, pois a  maioria dos proprietários de postos de combustível  os administra remotamente, principalmente no caso específico de postos de  estrada e cidades do interior.</h2>
+                
+                
+                <br><br><h6><img id="Image1" src="./Postos de Combustível - Automação de Bombas_files/post01.jpg"><br><strong>Imagem 01.</strong> Esquema típico de sistema de automação de bombas de  combustível.</h6><br><br> 
+                
+                
+                <br>
+                <br>              
+                	<h4>Ambiente de Desenvolvimento</h4>
+                <br>
+                
+                
+                <h2> Para iniciar o desenvolvimento  de uma aplicação de automação de  bombas de combustível, deve-se fazer  o <em>download</em> do <em>Software Development  Kit</em> - SDK do fabricante. No caso da <em>Gilbarco</em>, o SDK é composto por um simulador de bombas de combustível, uma ferramenta de configuração do CUB e um simulador  do CUB.</h2>
+                <h2> Para iniciar o desenvolvimento,  é necessário instalar, configurar e  executar o simulador de bombas de  combustível (<em>PumpSim.exe</em>), mostrado na <em>Figura  02,</em> em um computador que deve ser ligado,  via RS232, ou computador de desenvolvimento.  O simulador será responsável por enviar informações ao computador de desenvolvimento, permitindo que o programador simule todas as operações que podem ser executadas pelo frentista em uma bomba de combustível real.</h2>
+                
+                
+                <br><br><h6><img id="Image2" src="./Postos de Combustível - Automação de Bombas_files/post02.jpg"><br><strong>Imagem 02.</strong> Simulador de  Bombas de Combustível da <em>Gilbarco</em> (<em>PumpSim.exe</em>).</h6><br><br> 
+                
+                
+                <h2> Após executar o simulador  no computador auxiliar, deve-se  executar a ferramenta de configuração do CUB (<em>CUBConfig.exe</em>) no computador de desenvolvimento,  conforme mostrado na <em>Figura 03</em>. Esta  ferramenta permite configurar um CUB real  ou um CUB Simulado, indicando dentre  outras coisas, quantas bombas de combustível  estão ligadas ao mesmo.</h2>
+                
+                
+                <br><br><h6><img id="Image3" src="./Postos de Combustível - Automação de Bombas_files/post03.jpg"><br><strong>Imagem 03.</strong> Ferramenta de configuração do CUB da <em>Gilbarco</em> (<em>CUBConfig.exe</em>).</h6><br><br> 
+                
+                
+                <h2> Uma vez configurado para o modo CUB Simulado,  deve-se executar o <em>software</em> Simulador de CUB (<em>CubDemo.exe</em>)  na máquina de desenvolvimento.  Surgirá então uma tela tipo MS-DOS  conforme mostrado na <em>Figura 04</em>,  iniciando assim a comunicação entre o servidor simulado  de bombas de combustível (<em>PumpSim.exe</em>) e o simulador de CUB (<em>CubDemo.exe</em>).</h2>
+                
+                
+                <br><br><h6><img id="Image4" src="./Postos de Combustível - Automação de Bombas_files/post04.jpg"><br><strong>Imagem 04.</strong> Simulador de  CUB da <em>Gilbarco</em> (<em>CubDemo.exe</em>).</h6><br><br> 
+                
+                
+                <h2>Quando o simulador de  CUB é executado, surge no canto inferior direito da tela,  um ícone para cada bomba, conforme configuração feita na ferramenta de  configuração de CUB (<em>CUBConfig.exe</em>).  Inicialmente, todas as bombas  aparecem marcadas com um “X”, e apresentadas no estado “Fora do Ar”. À medida  que vai sendo estabelecida a  comunicação entre o servidor simulado  de bombas de combustível (<em>PumpSim.exe</em>) e o simulador de CUB (<em>CubDemo.exe),</em> as bombas mudam de estado, conforme mostrado na <em>Figura 05</em>.</h2>
+                
+                
+                <br><br><h6><img id="Image5" src="./Postos de Combustível - Automação de Bombas_files/post05.jpg"><br><strong>Imagem 05.</strong> Ícones das bombas criados pelo  Simulador de CUB da <em>Gilbarco</em> (<em>CubDemo.exe</em>).</h6><br><br> 
+                
+                
+                <h2> Os estados das bombas podem ser vistos passando o <em>mouse</em> sobre cada um dos respectivos  ícones da barra do <em>Windows</em>.  Internamente na aplicação de  automação os estados constituem constantes retornadas pelo  CUB, e devem ser declaradas conforme  segue:</h2>
+                
+                
+                <h6><br><br></h6><h3>
+                    //--- Declaração  de Constantes Globais de Estado das  Bombas ---
+                    <br>
+                    &nbsp;const SFORADOAR&nbsp;&nbsp;&nbsp;&nbsp; = '0';<br>
+                    &nbsp;const SDISPONIVEL&nbsp;&nbsp; = '1';<br>
+                    &nbsp;const SABASTECENDO&nbsp; = '2';<br>
+                    &nbsp;const sFIMDEVENDA&nbsp;&nbsp; = '3';<br>
+                    &nbsp;const SBICOFORA&nbsp;&nbsp;&nbsp;&nbsp; = '5';<br>
+                    &nbsp;const SBOMBAFECHADA = '6';<br>
+                    &nbsp;const SPAUSA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = '8';<br>
+                    &nbsp;const SDESCONHECIDO = '7';<br>
+                    &nbsp;const SAUTORIZADA&nbsp;&nbsp; = '9';
+                </h3><br><br>
+                
+                <h2>Faz-se necessário que o desenvolvedor  crie uma representação icônica para cada um dos estados que podem ser assumidos  pela bomba dentro da aplicação, de forma a facilitar  a representação dos mesmos para o usuário final.  Na <em>Figura 06</em> apresentamos uma legenda completa  dos estados, o momento em que os mesmos ocorrem, bem como uma representação  icônica proposta.</h2>
+                
+                
+                <br><br><h6><img id="Image6" src="./Postos de Combustível - Automação de Bombas_files/post06.jpg"><br><strong>Imagem 06.</strong> Ícones das bombas criados pelo  Simulador de CUB da <em>Gilbarco</em> (<em>CubDemo.exe</em>).</h6><br><br> 
+                
+                
+                <br>
+                <br>
+                	<h4> Comunicação com o CUB</h4>
+                <br>
+                
+                
+                <h2> A comunicação entre o CUB e aplicação  de automação desenvolvida é feita  através das funções disponibilizadas  pelo fabricante, presentes na <em>CUB32.dll</em>. Segue a lista  das funções e suas respectivas declarações:</h2>
+                
+                <h6><br><br></h6><h3>
+                    //--- Declaração  de Funções disponíveis em CUB32.dll ---
+                    <br>
+                    <br>
+                    function CUBAbrirBomba(NroBomba: LongInt): LongInt; stdcall; external 'CUB32.dll';<br>
+                    function CUBLerEstado(NroBomba: LongInt; Estado:  Pointer): LongInt; stdcall; external 'CUB32.dll';<br>
+                    function CUBAutorizarBomba(NroBomba: LongInt): LongInt; stdcall; external 'CUB32.dll';<br>
+                    function CUBDesautorizarBomba(NroBomba: LongInt):  LongInt; stdcall; external 'CUB32.dll';<br>
+                    function CUBFecharBomba(NroBomba: LongInt): LongInt; stdcall; external 'CUB32.dll';<br>
+                    function CUBContinuarAbastecimento(NroBomba: LongInt):  LongInt; stdcall; external 'CUB32.dll';<br>
+                    function CUBSetarNivelDePreco(NroBomba:  LongInt; NivelDePreco: LongInt):  LongInt; stdcall; external<br>
+                    'CUB32.dll';<br>
+                    function CUBLerRTM(NroBomba: LongInt; var RealTimeMoney: LongInt): LongInt; stdcall; external<br>
+                    'CUB32.dll';<br>
+                    function CUBConfirmarLeituraVenda(NroBomba: LongInt):  LongInt; stdcall; external 'CUB32.dll';<br>
+                    function CUBDescarregarDll: LongInt; stdcall; external 'CUB32.dll';<br>
+                    function CUBProgramarPreco(NroProduto: LongInt; NivelDePreco: LongInt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    NovoPreco: LongInt): LongInt; stdcall; external 'CUB32.dll';<br>
+                    function CUBMapearProduto(NroBomba: LongInt; NroBico:  LongInt; NroProduto: LongInt ) : LongInt;<br>
+                    stdcall; external 'CUB32.dll';<br>
+                    function CUBAutorizarBico(NroBomba: LongInt; NivelDePreco: LongInt; NroBico: LongInt ): LongInt;<br>
+                    stdcall; external 'CUB32.dll';<br>
+                    function CUBLerTotais(NroBomba: LongInt; NroProduto:  LongInt; NivelDePreco: LongInt;<br>
+                    EncerranteLitros:  Pointer; EncerranteDinheiro: Pointer; var Preco: LongInt): LongInt;<br>
+                    stdcall; external 'CUB32.dll';<br>
+                    function CUBLerVenda(NroBomba: LongInt; var NroProduto:  LongInt; var NivelDePreco:  LongInt; var <br>
+                    Mililitros: LongInt; var Dinheiro: LongInt; var  Preco: LongInt ): LongInt; stdcall; external<br>
+                    'CUB32.dll';<br>
+                    function CUBPresetLitros(NroBomba: LongInt; NivelDePreco: LongInt; NroBico: LongInt;<br>
+                    CentiLitrosMaximo: LongInt ): LongInt; stdcall; external 'CUB32.dll';<br>
+                    function CUBPresetDinheiro(NroBomba: LongInt; NivelDePreco: LongInt; ValorMaximo: LongInt ):<br>
+                    LongInt; stdcall; external 'CUB32.dll';<br>
+                    function CUBLerPaginaTag( NroTag : LongInt; NroPagina:  LongInt; DataBuffer: Pointer) : LongInt;<br>
+                    stdcall; external 'CUB32.dll';
+                </h3><br><br>
+                
+                
+                <h2>Dentre as funções da <em>CUB32.dll</em> destacam-se:</h2>
+                
+                
+                <br>
+                <br>
+                	<h4>Ler  Estado da Bomba (CUBLerEstado):</h4>
+                <br>
+                
+                
+                <h2> Esta função retorna o estado atual  de todas as bombas ou de uma bomba específica.<strong></strong></h2>
+                
+                
+                <h6><br><br></h6><h3>
+                function CUBLerEstado(NroBomba: LongInt; Estado:  Pointer): LongInt; stdcall; external 'CUB32.dll';		
+                </h3><br><br>
+                
+                
+                <h2><em>Parâmetros:</em></h2>
+                
+                
+                <ul>
+                    <li>long  NroBomba - {recebe valor de de 0 a 99} </li>
+                    <li>char *Estado - {Buffer  alocado pelo  PDV onde será informado o estado solicitado}</li>
+                    </ul>
+                    <h2><em>Retorno:</em></h2>
+                    <ul>
+                    <li><em>0 </em>= O  CUB <em>Server</em> recebeu a ordem  corretamente.</li>
+                    <li><em>1 </em>=&nbsp; Erro nos parâmetros. O número de bomba é  incorreto.</li>
+                    <li><em>2 </em>=&nbsp; Erro de comunicação entre a <em>dll</em> e o servidor. </li>
+                    <li><em>Outro </em>=  Código de erro retornado pelo <em>Windows</em>. Ver <em>winsock2.h</em> ou <em>winerror.h.</em></li>
+                    </ul>
+                    <h2><em>Nota:</em></h2>
+                    <ul>
+                    <li>Se NroBomba = 0, será informado o estado de  todas as bombas, sendo cada byte o estado de uma delas. </li>
+                    <li>Se NroBomba &lt;&gt; 0, só será informado o  estado da bomba solicitada.</li>
+                </ul>
+                
+                
+                <br>
+                <br>
+                	<h4><strong>Leitura  de Venda das Bombas (CUBLerVenda):</strong></h4>
+                <br>
+                
+                
+                <h2>Esta função deve ser utilizada  quando a bomba está em estado de “FIMDEVENDA” (após o fim de um abastecimento  na pista). Após ter chamado esta função e gravados os dados na base de dados do  software de automação de bombas, deve ser chamada a função <em>CUBConfirmarLeituraVenda</em> para que a bomba fique livre para um novo abastecimento.</h2>
+                
+                
+                <h6><br><br></h6><h3>
+                    function CUBLerVenda(NroBomba: LongInt; var NroProduto: LongInt; var NivelDePreco: LongInt; var<br>
+                    Mililitros:  LongInt; var Dinheiro: LongInt; var Preco: LongInt ): LongInt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    stdcall; external 'CUB32.dll';
+                </h3><br><br>
+                
+                
+                <h2><em>Parâmetros:</em></h2>
+                
+                
+                <ul>
+                    <li>long  NroBomba - {recebe valor de de 1 a 99}</li>
+                    <li>long  *NroProduto - {pointer onde será  informado o código de produto}</li>
+                    <li>long  *NivelPreco - {pointer onde será informado o nível  de preço}</li>
+                    <li>long  *Mililitros - {pointer onde será informada o volume do abastecimento}</li>
+                    <li>long  *Dinheiro - {pointer onde será  informado o valor do abastecimento}</li>
+                    <li>long *Preço - {pointer onde será informado o  preço unitário do produto}</li>
+                    </ul>
+                    <h2><em>Retorno:</em></h2>
+                    <ul>
+                    <li>0 = CUB <em>Server</em> recebeu a ordem corretamente.</li>
+                    <li>1 = Nº de bomba incorreto ou bomba não está em estado FIMDEVENDA.</li>
+                    <li>2 = Erro de comunicação entre a <em>dll </em>e o servidor. </li>
+                    <li>Outro = Código de erro retornado pelo <em>Windows</em>.  Ver <em>winsock2.h</em> ou <em>winerror.h</em>.</li>
+                </ul>
+                
+                
+                <br>
+               		<h4><strong>Leitura da Venda em Tempo Real</strong></h4>
+                <br>
+                <br>
+                
+                
+                <h2>Esta função permite que o usuário veja na tela do computador os valores  do abastecimento que esteja acontecendo na pista. O valor  retornado não é totalmente <em>real-time</em>.  Existem vários atrasos envolvidos no processo de comunicação que fazem com que  o valor não seja totalmente preciso, mas a aproximação é muito boa.</h2>
+                
+                
+                <h6><br><br></h6><h3>
+                	function CUBLerRTM(NroBomba: LongInt; var RealTimeMoney:  LongInt): LongInt; stdcall; external 'CUB32.dll';
+                </h3><br><br>
+                
+                
+                <h2><em>Parâmetros:</em></h2>
+                
+                
+                <ul>
+                    <li>long  NroBomba - {recebe valor de de 1 a 99}</li>
+                    <li>long  *RTM - {pointer onde será  devolvido o ultimo  valor lido  da bomba}</li>
+                    </ul>
+                    <h2><em>Retorno:</em></h2>
+                    <ul>
+                    <li>0 = CUB <em>Server</em> recebeu a ordem corretamente.</li>
+                    <li>1 = Erro nos parâmetros. Número de bomba errado  ou bomba não configurada.</li>
+                    <li>2 = Erro de comunicação entre a <em>dll </em>e o servidor. </li>
+                    <li>Outro = Código de erro retornado pelo <em>Windows</em>.  Ver <em>winsock2.h</em> ou <em>winerror.h.</em></li>
+                </ul>
+                
+                
+                <h2>Tipicamente, para implementar  o tratamento mínimo da comunicação com o CUB e fazer a automação das bombas, é  necessário iniciar um novo projeto, adicionar um componente <em>TTimer</em> e implementar  o seguinte algoritmo:</h2>
+                <br>
+                <h2>1. Lê o estado de todas as bombas juntas (<em>CUBLerEstado</em>)</h2>
+                <br>
+                <h2> 2. Faz um <em>l</em><em>oop</em> para processar o estado lido de cada  uma das bombas</h2>
+                <br>
+                <h2> 3. Caso o estado da bomba tenha mudado em relação ao estado anterior</h2>
+                <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1. Atribue o  novo estado à bomba atualizando as representações visuais</h2>
+                <br>
+                <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2. Caso o novo  estado = FIMDEVENDA</h2>
+                <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2.1. Faz  a leitura das informações da venda (<em>CUBLerVenda</em>)</h2>
+                <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2.2.  Confirma a leitura da venda para o  CUB (<em>CUBConfirmarLeituraVenda</em>)</h2>
+                <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2.3. Lê  os encerrantes de dinheiro e litros  da bomba (<em>CUBLerTotais</em>)</h2>
+                <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2.4.  Atualiza a tela  e/ou a base de dados do sistema</h2>
+                <br>
+                <h2>Uma vez implementado o algoritmo, podemos caprichar na interface  visual do sistema, de forma a obter  um resultado semelhante ao mostrado na <em>Figura 07</em>, onde o usuário é capaz de visualizar  o estado de todas as bombas e executar todas as funções disponibilizadas pela  SDK de forma muito fácil e intuitiva.</h2>
+                
+                
+                <br><br><h6><img id="Image7" src="./Postos de Combustível - Automação de Bombas_files/post07.jpg"><br><strong>Imagem 07.</strong> Aplicação  completa de automação de bombas de  combustível da <em>TKS Software</em>.</h6><br><br> 
+                
+                
+                <h2>Aplicações como &nbsp;mostrada  na <em>Figura 07</em> permitem o controle  completo da pista a partir de uma central, que pode estar localizada, por  exemplo, na loja de conveniências do posto. </h2>
+                <h2> Através de funções de <em>preset</em> em valor e volume, há muito é possível tecnicamente que os postos sejam  operados com número mínimo de frentistas ou até mesmo sem eles, como ocorre na  grande maioria dos países desenvolvidos.</h2>
+                <h2> No entanto, por motivos populistas, protecionistas ou até mesmo  eleitoreiros, o Brasil insiste em resistir ao progresso, impedindo por lei que  os postos de combustíveis adotem tal tipo de tecnologia de forma a se modernizar,  reduzindo seus custos operacionais e entrando em sintonia com as tendências  mundiais. </h2>
+                <h2> Este tipo de tecnologia deve ser usado somente para fins de  automação, supervisão e controle da pista e seus abastecimentos, não podendo  ser usado para mudança do conceito de atendimento dos postos.</h2>
+                <h2> Posturas intervencionistas como estas dificultam a popularização  das tecnologias e consequentemente o crescimento de todos os setores da  economia ligados a ela. Sob a pretensa justificativa de proteção à classe  frentista, o estado:</h2>
+                <br>
+                <br>
+                
+                
+                <ul>
+                    <li>Onera os proprietários de postos e consequentemente  os consumidores finais, que no final das contas pagam pelos altos custos  operacionais dos postos.</li>
+                    <li>Dificulta diretamente o crescimento de toda uma  cadeia de pesquisa e desenvolvimento de alta tecnologia em <em>hardware</em> e <em>software</em> que,  importante ressaltar, também gera emprego e renda e é base sólida para o  crescimento e desenvolvimento de um país.</li>
+                </ul>
+                <br>
+                <br>
+                
+                
+                <h2>Questões como estas devem ser resolvidas através de políticas de  educação, qualificação e recolocação de mão-de-obra. Pois a nossa diferença,  quando comparados aos demais países, não está na nossa capacidade técnica de  desenvolvimento e aplicação da tecnologia, mas sim no fato de que os países  desenvolvidos, antes mesmo de automatizar seus postos, descobriram através da  educação, que o crescimento e desenvolvimento de um país em uma economia de  mercado globalizada, se dá com o mínimo possível de intervenção do estado.</h2>
+                
+                
+                <br>
+                <br>
+                	<h4> Conclusão</h4>
+                <br>
+                
+                
+                <h2> Este artigo serve como uma rápida introdução ao processo de  automação de bombas de combustível,  cobrindo de forma geral os principais conceitos e ferramentas envolvidas no processo de implementação  deste tipo de solução.&nbsp;</h2>
+                <h2>A aplicação dos conceitos apresentados permite o desenvolvimento  de soluções completas com diversos recursos avançados, criados sob medida para  as necessidades deste nicho de mercado. No entanto o desenvolvedor deve estar  pronto para encarar um mercado altamente fechado que dificulta e muito, a  entrada de novas soluções. Principalmente no que diz respeito às bandeiras, estas  procuram evitar que seus filiados utilizem <em>softwares</em> de terceiros que não aqueles já previamente acordados com a bandeira em questão. </h2>
+                <h2> Sistemas como estes envolvem o correto funcionamento e operação  de diversos dispositivos e por conseqüência devem estar associados a contratos  de manutenção, pois os postos normalmente não dispõem de mão-de-obra  especializada para tanto.&nbsp; No entanto um  problema muito importante a ser contornado pelo desenvolvedor, e que dificulta  bastante a entrada neste mercado, são as distâncias físicas, principalmente  quando se trata de postos de estrada ou cidades do interior.</h2>
+                <h2> É importante ressaltar,  no entanto, que o desenvolvimento e conseqüente implantação do sistema em um  cliente final requer, dentre outras coisas, conhecimentos a respeito da legislação  normativa específica de postos de combustível, bem como conhecimentos técnicos  sobre a interface e configuração as bombas, tópicos estes não abordados neste  artigo.</h2>
+                <h2>Maiores informações podem ser obtidas junto ao fabricante no site <em><a href="http://www.gilbarco.com.br/">www.gilbarco.com.br</a></em>.</h2>
+                <br>
+			</td>
+		</tr>
+		
+	<!--Fim do texto do artigo e começo do rodapé com o "Sobre o Autor"-->
+		
+		<tr>
+            <td bgcolor="#5B9702">
+                <table style="background-repeat: no-repeat;" border="0" width="100%" cellspacing="0" align="center" cellpadding="0" background="./Postos de Combustível - Automação de Bombas_files/b_autor.jpg">
+                    <tbody><tr>
+                        <td rowspan="3" width="169"><p align="center"> <img border="0" src="./Postos de Combustível - Automação de Bombas_files/autores.png" width="158" height="148"></p></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p style="margin-left: 20px">
+                                <b><font face="Tahoma" color="#FFFFFF">Sobre o Autor</font></b>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h5><strong>Victory Fernandes</strong>, consultor técnico do The Club.<br>
+                                <hr>
+                                E-mail: <a href="mailto:suporte@theclub.com.br">suporte@theclub.com.br</a>
+                            </h5>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+		</tr>
+
+		</tbody></table>
+		<br>
+		</form>
+        
+		<img src="./Postos de Combustível - Automação de Bombas_files/banner_theclub.gif" border="0" alt="The Club - O Maior Clube de programadores do Brasil" title="The Club - O Maior Clube de programadores do Brasil" style="display:scroll;position:fixed;bottom:10px;right:10px;">
+            
+	
+<div id="SL_balloon_obj" alt="0" style="display: block;"><div id="SL_button" class="SL_ImTranslatorLogo" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/imtranslator-s.png&quot;); opacity: 0; display: none; left: 933px; top: 4947px; transition: visibility 2s, opacity 2s linear;"></div><div id="SL_shadow_translation_result2" style="display: none;"></div><div id="SL_shadow_translator" style="display: none;"><div id="SL_planshet"><div id="SL_arrow_up" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/up.png&quot;);"></div><div id="SL_Bproviders"><div class="SL_BL_LABLE_ON" title="Google" id="SL_P0">G</div><div class="SL_BL_LABLE_ON" title="Microsoft" id="SL_P1">M</div><div class="SL_BL_LABLE_ON" title="Translator" id="SL_P2">T</div></div><div id="SL_alert_bbl" style="display: none;"><div id="SLHKclose" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/delete.png&quot;);"></div><div id="SL_alert_cont"></div></div><div id="SL_TB"><table id="SL_tables" cellspacing="1"><tr><td class="SL_td" width="10%" align="right"><input id="SL_locer" type="checkbox" title="Bloquear idioma"></td><td class="SL_td" width="20%" align="left"><select id="SL_lng_from" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/select.png&quot;) 100% 0px no-repeat rgb(255, 255, 255);"><option value="auto">Detectar idioma</option><option value="af">Africâner</option><option value="sq">Albanês</option><option value="de">Alemão</option><option value="ar">Arabe</option><option value="hy">Armênio</option><option value="az">Azerbaijano</option><option value="eu">Basco</option><option value="bn">Bengali</option><option value="be">Bielo-russo</option><option value="my">Birmanês</option><option value="bs">Bósnio</option><option value="bg">Búlgaro</option><option value="ca">Catalão</option><option value="kk">Cazaque</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinês (Simp)</option><option value="zh-TW">Chinês (Trad)</option><option value="si">Cingalês</option><option value="ko">Coreano</option><option value="ht">Crioulo haitiano</option><option value="hr">Croata</option><option value="da">Dinamarquês</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option value="es">Espanhol</option><option value="eo">Esperanto</option><option value="et">Estoniano</option><option value="fi">Finlandês</option><option value="fr">Francês</option><option value="gl">Galego</option><option value="cy">Galês</option><option value="ka">Georgiano</option><option value="el">Grego</option><option value="gu">Gujarati</option><option value="ha">Hauça</option><option value="iw">Hebraico</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandês</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonésio</option><option value="en">Inglês</option><option value="yo">Ioruba</option><option value="ga">Irlandês</option><option value="is">Islandês</option><option value="it">Italiano</option><option value="ja">Japonês</option><option value="jw">Javanês</option><option value="kn">Kannada</option><option value="km">Khmer</option><option value="lo">Laosiano</option><option value="la">Latim</option><option value="lv">Letão</option><option value="lt">Lituano</option><option value="mk">Macedônico</option><option value="ml">Malaiala</option><option value="ms">Malaio</option><option value="mg">Malgaxe</option><option value="mt">Maltês</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="ne">Nepalês</option><option value="no">Norueguês</option><option value="fa">Persa</option><option value="pl">Polonês</option><option value="pt">Português</option><option value="pa">Punjabi</option><option value="ro">Romeno</option><option value="ru">Russo</option><option value="sr">Sérvio</option><option value="st">Sesotho</option><option value="so">Somália</option><option value="sw">Suaíli</option><option value="su">Sudanês</option><option value="sv">Sueco</option><option value="tg">Tadjique</option><option value="tl">Tagalo</option><option value="th">Tailandês</option><option value="ta">Tâmil</option><option value="cs">Tcheco</option><option value="te">Telugo</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeque</option><option value="vi">Vietnamita</option><option value="yi">Yiddish</option><option value="zu">Zulu</option></select></td><td class="SL_td" width="3" align="center"><div id="SL_switch_b" title="Alternar Idiomas" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/switchb.png&quot;);"></div></td><td class="SL_td" width="20%" align="left"><select id="SL_lng_to" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/select.png&quot;) 100% 0px no-repeat rgb(255, 255, 255);"><option value="af">Africâner</option><option value="sq">Albanês</option><option value="de">Alemão</option><option value="ar">Arabe</option><option value="hy">Armênio</option><option value="az">Azerbaijano</option><option value="eu">Basco</option><option value="bn">Bengali</option><option value="be">Bielo-russo</option><option value="my">Birmanês</option><option value="bs">Bósnio</option><option value="bg">Búlgaro</option><option value="ca">Catalão</option><option value="kk">Cazaque</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinês (Simp)</option><option value="zh-TW">Chinês (Trad)</option><option value="si">Cingalês</option><option value="ko">Coreano</option><option value="ht">Crioulo haitiano</option><option value="hr">Croata</option><option value="da">Dinamarquês</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option value="es">Espanhol</option><option value="eo">Esperanto</option><option value="et">Estoniano</option><option value="fi">Finlandês</option><option value="fr">Francês</option><option value="gl">Galego</option><option value="cy">Galês</option><option value="ka">Georgiano</option><option value="el">Grego</option><option value="gu">Gujarati</option><option value="ha">Hauça</option><option value="iw">Hebraico</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandês</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonésio</option><option value="en">Inglês</option><option value="yo">Ioruba</option><option value="ga">Irlandês</option><option value="is">Islandês</option><option value="it">Italiano</option><option value="ja">Japonês</option><option value="jw">Javanês</option><option value="kn">Kannada</option><option value="km">Khmer</option><option value="lo">Laosiano</option><option value="la">Latim</option><option value="lv">Letão</option><option value="lt">Lituano</option><option value="mk">Macedônico</option><option value="ml">Malaiala</option><option value="ms">Malaio</option><option value="mg">Malgaxe</option><option value="mt">Maltês</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="ne">Nepalês</option><option value="no">Norueguês</option><option value="fa">Persa</option><option value="pl">Polonês</option><option selected="selected" value="pt">Português</option><option value="pa">Punjabi</option><option value="ro">Romeno</option><option value="ru">Russo</option><option value="sr">Sérvio</option><option value="st">Sesotho</option><option value="so">Somália</option><option value="sw">Suaíli</option><option value="su">Sudanês</option><option value="sv">Sueco</option><option value="tg">Tadjique</option><option value="tl">Tagalo</option><option value="th">Tailandês</option><option value="ta">Tâmil</option><option value="cs">Tcheco</option><option value="te">Telugo</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeque</option><option value="vi">Vietnamita</option><option value="yi">Yiddish</option><option value="zu">Zulu</option></select></td><td class="SL_td" width="5%" align="center"> </td><td class="SL_td" width="8%" align="center"><div id="SL_TTS_voice" title="Ouça" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/ttsvoice.png&quot;);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_copy" title="Copiar" class="SL_copy" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/copy.png&quot;);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_bbl_font_patch"></div><div id="SL_bbl_font" title="Tamanho da fonte" class="SL_bbl_font" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/font.png&quot;);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_bbl_help" title="Ajuda" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bhelp.png&quot;);"></div></td><td class="SL_td" width="15%" align="right"><div id="SL_pin" class="SL_pin_off" title="Fixar a janela de pop-up" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/pin-on.png&quot;);"></div></td></tr></table></div></div><div id="SL_shadow_translation_result" style="visibility: visible;"></div><div id="SL_loading" class="SL_loading" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/loading.gif&quot;);"></div><div id="SL_player2"></div><div id="SL_alert100">A função de fala é limitada a 200 caracteres</div><div id="SL_Balloon_options" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bg3.png&quot;) rgb(255, 255, 255);"><div id="SL_arrow_down" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/down.png&quot;);"></div><table id="SL_tbl_opt" width="100%"><tr><td width="5%" align="center"><input id="SL_BBL_locer" type="checkbox" checked="1" title="Mostrar o botão do ImTranslator 3 segundos"></td><td width="5%" align="left"><div id="SL_BBL_IMG" title="Mostrar o botão do ImTranslator 3 segundos" style="background: url(&quot;chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/img/util/bbl-logo.png&quot;);"></div></td><td width="70%" align="center"><a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/options.html?bbl" target="_blank" class="SL_options" title="Mostrar opções">Opções</a> : <a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/options.html?hist" target="_blank" class="SL_options" title="Histórico de tradução">Histórico</a> : <a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/content/html/options/options.html?feed" target="_blank" class="SL_options" title="Comentários">Comentários</a> : <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GD9D8CPW8HFA2" target="_blank" class="SL_options" title="Faça sua contribuição">Donate</a></td><td width="15%" align="right"><span id="SL_Balloon_Close" title="Encerrar">Encerrar</span></td></tr></table></div></div></div></body></html>

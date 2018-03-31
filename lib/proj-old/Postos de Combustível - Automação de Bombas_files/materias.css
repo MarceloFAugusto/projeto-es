@@ -1,0 +1,192 @@
+body {
+	background-color: #FFFFFF;
+scrollbar-face-color:#336699;
+scrollbar-highlight-color:#003366;
+scrollbar-3dlight-color:#0066cc;
+scrollbar-darkshadow-color:#FFFFFF;
+scrollbar-shadow-color:#0066cc;
+scrollbar-arrow-color:#FFFFFF;
+scrollbar-track-color:#FFFFFF;
+
+}
+
+/* Classe Título do artigo */
+.titulo
+ {
+	background-color: #7DA519;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20pt;
+	font-family: verdana, sans-serif;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 30;
+	margin-top: 0px; 
+    margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+
+}
+
+/* ClasseTexto do artigo */
+.texto
+ {
+	margin: 0px 10px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10pt;
+	font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+	text-indent: 50px;
+	text-align: center;
+	color: #696969;
+}
+
+
+/* Título do artigo */
+h1 {
+	background-color: #7DA519;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20pt;
+	font-family: verdana, sans-serif;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 30;
+	margin-top: 0px; 
+    margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+
+}
+
+/* Texto do artigo */
+h2 {
+	margin: 0px 10px;
+    font-style: normal;
+	font-weight: normal;
+	font-size: 10pt;
+	font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+	text-indent: 50px;
+	text-align: justify;
+	color: #696969;
+}
+
+/* Código fontes */
+h3 {
+	background-color: #E6F5BC;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: Courier New;
+	text-indent: 0px;
+	text-align: justify;
+	color: #696969;
+	padding: 15;
+    margin-top: 0px; 
+    margin-right: 20px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+
+}
+
+/* Subtítulo do artigo */
+h4 {
+	font style= normal;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: verdana, sans-serif;
+	text-indent: 50px;
+	text-align: justify;
+	text-decoration: underline;
+	color: #5B9702;
+    margin-top: 0px; 
+    margin-right: 16px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+
+}
+
+/* Texto "Sobre o autor" */
+h5 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10pt;
+	font-family: Tahoma;
+	text-indent: 0px;
+	text-align: justify;
+	color: #FFFFFF;
+	padding: 15;
+    margin-top: 0px; 
+    margin-right: 20px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+
+}
+
+/* Legenda das imagens */
+h6 
+{
+	margin: 0px 50px;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 8pt;
+	font-family: Tahoma;
+	text-indent: 0px;
+	text-align: center;
+	color: #696969;
+
+}
+
+
+
+a:link {
+	text-decoration: none;
+	color: #FF3300;
+	font-weight: bold;
+
+}
+
+a:visited {
+	color: #FF3300;
+	text-decoration:none;
+}
+
+a:active {
+	background-color: none;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: black;
+	font-weight: bold;
+	
+}
+
+span.tab_precos {
+	color: #000000;
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: tahoma, sans-serif;
+}
+
+#t_precos {
+	color: #000000;
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 8pt;
+	font-family: tahoma, sans-serif;
+}
+
+#t_mail {
+	color: #FF6699;
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: tahoma, sans-serif;
+
+}
